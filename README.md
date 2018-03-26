@@ -1,5 +1,7 @@
 # Montage
 
+![Montage overview](https://github.com/shahcompbio/montage/blob/master/images/montage_overview.png)
+
 ## Overview
 
 Montage is a web-based visualization platform for building interactive dashboards of single cell genomics data. It grew out of our need to flexibly create collections of both standard and custom visualizations. Key features include:
