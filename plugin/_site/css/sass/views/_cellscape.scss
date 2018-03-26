@@ -1,0 +1,158 @@
+/* Cellscape styles */
+
+ul {
+	list-style: none;
+	-webkit-padding-start: 0px; /* override user agent stylesheet */
+}
+
+.cnvSVG {
+	overflow: scroll;
+}
+
+
+/* brush */
+
+.brush .extent {
+	stroke: #fff;
+	fill-opacity: .4;
+	shape-rendering: crispEdges;
+}
+
+.gtypeAnnot.inactive {
+	fill: #ffffff;
+}
+
+.tpAnnot.inactive {
+	fill: #ffffff;
+}
+
+.graph.node.inactive {
+	fill: #ffffff;
+	stroke: #CECECE;
+}
+
+.tree.node.inactive {
+	fill: #ffffff;
+	stroke: #CECECE;
+}
+
+.graph.node.active {
+	fill: #000000;
+}
+
+.tree.node.active {
+	fill: #000000;
+}
+
+.legendGroupRect.active {
+	stroke: #000000;
+}
+
+.legendTpRect.active {
+	stroke: #000000;
+}
+
+div.cellscape {
+	padding: 5px 15px;
+}
+
+
+
+.cellscape2-wrapper {
+	float: left;
+	margin: 0 0 0px 0px;
+}
+
+.cellscape2-wrapper .heatmapDIV {
+	position: absolute;
+	overflow-y: scroll;
+}
+
+
+.cellscape2-wrapper .genomeDIV {
+	position: absolute;
+}
+.cellscape2-wrapper .minimapDIV {
+	position: absolute;
+}
+.cellscape2-wrapper .hm-indicator {
+	fill: #D6D5D5;
+	fill-opacity: 0;
+}
+
+.cellscape2-wrapper .hm-indicator.cell-hover {
+	fill-opacity: 1;
+	fill: #f3e910;
+}
+
+.cellscape2-wrapper .hm-indicator.cell-saved {
+	fill-opacity: 1;
+}
+
+.cellscape2-wrapper .hm-indicator.cell-active {
+	fill-opacity: 1;
+	fill: #000000;
+}
+
+.cellscape2-wrapper rect.cell-hover {
+	stroke-width: 0px;
+}
+
+
+.cellscape2-wrapper .gw-background-lines line {
+	stroke-dasharray: 0.5,2;
+}
+
+.cellscape2-wrapper .chrom-axis rect {
+	fill: #FFFFFF
+}
+
+.cellscape2-wrapper .chrom-axis text {
+	font-size: 7pt;
+}
+.cellscape2-wrapper .genome-y-axis text {
+	font-size: 8pt;
+}
+
+.cellscape2-wrapper .genome-y-axis path, line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+
+.cellscape2-wrapper text.genome-name {
+	font-size: 8pt;
+}
+
+.cellscape2-wrapper text.legend {
+	font-size: 9pt;
+  	fill: #585858; 
+}
+.cellscape2-wrapper rect.csv-export-button {
+  fill: #CECECE; }
+
+.cellscape2-wrapper rect.csv-export-button.button-active {
+  fill: #999999; }
+
+.cellscape2-wrapper rect.clear-button {
+  fill: #CECECE; }
+
+.cellscape2-wrapper rect.clear-button.button-active {
+  fill: #999999; }
+
+.cellscape2-wrapper rect.copyNum-export-button {
+  fill: #CECECE; }
+
+.cellscape2-wrapper rect.copyNum-export-button.button-active {
+  fill: #999999; }
+
+.cellscape2-wrapper text.copyNum-export-button-text, text.csv-export-button-text, text.clear-button-text{
+  fill: #FFFFFF;
+  font-weight: light;
+  font-family: Arial;
+  pointer-events: none;
+  font-size: 10pt; 
+}
+.cellscape2-wrapper img.copyNum-export-button, img.csv-export-button, img.clear-button{
+  pointer-events: none;
+}

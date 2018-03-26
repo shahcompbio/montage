@@ -1,0 +1,4 @@
+__PIPELINE_INFO__:
+    data_type: generic
+__HEADER__:
+    caller: gene_annotations

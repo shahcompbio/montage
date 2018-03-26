@@ -1,0 +1,71 @@
+ //Violin Plot
+
+.beanplot-container .violin-active {
+	stroke: #0F7CA6 !important;
+	fill: #0F7CA6 !important;
+}
+
+.beanplot-container .violin-inActive {
+	stroke: #D1D2D4 !important;
+	fill: #D1D2D4 !important;
+}
+
+.beanplot-container .violin-hover {
+	stroke: #353535 !important;
+	stroke-width: 2px !important;
+}
+
+
+.violin-container .axis text {
+	font-size: 8pt;
+}
+
+.violin-container  path.violin {
+	stroke: #0C7CA6;
+	stroke-width: 1px;
+	fill: #0C7CA6;
+}
+
+.violin-container  path.violin-hover {
+	fill-opacity: 0.8;
+}
+
+.violin-container  path.violin-active {
+	fill-opacity: 0.8;
+}
+
+.violin-container  path.violin-inactive {
+	fill: #D1D2D4 !important;
+	stroke: #D1D2D4 !important;
+}
+
+.violin-container circle.cell {
+	fill: #f3e910;
+	fill-opacity: 0;
+	pointer-events: none;
+}
+
+.violin-container circle.cell-hover {
+	fill-opacity: 1;
+	stroke-width: 0.5px;
+	stroke: #000000;
+}
+
+.violin-container .violin.line {
+	stroke: #B81B41;
+	stroke-width: 1px;
+	pointer-events: none;
+}
+
+.violin-container .violin.line.median {
+	stroke: #1bb437;
+	stroke-width: 2px;
+}
+
+.violin-container .violin.line.violin-inactive {
+	stroke: #747474;
+}
+
+.violin-container .violin.line.median.violin-inactive {
+	stroke: #646464;
+}

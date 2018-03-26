@@ -1,0 +1,56 @@
+
+/* Cytoscope */
+
+.panel-blue {
+	background-color: #2196f3 !important;
+	color: #FFF !important;
+}
+
+.panel-blue input {
+	color: #FFF;
+}
+
+.cy-toolbar {
+	border-radius:6px;
+	background-color:#2196f3; 
+	z-index: 9999;
+	opacity: 1; 
+	display: none; 
+	position: absolute; 
+	right: auto; 
+}
+
+.cy-toolbar a, .cy-toolbar a:visited {
+	padding-top:6px;
+	padding-bottom:6px;
+	color:#FFF;
+	background-color:#2196f3;
+}
+
+.cy-toolbar a:hover, .cy-toolbar a:focus {
+	background-color:#4bc2e0 !important;
+}
+
+.cy-toolbar .header {
+	background:#1C67A3;
+	border-radius:6px 6px 0 0;
+	color:#FFF;
+	padding:10px 12px;
+}
+
+.cy-toolbar .arrow {
+	width:0;
+	height:0;
+	position: absolute;	
+	border-width:7px;
+	border-style:solid;
+	border-color: transparent #2196f3 transparent transparent;
+	top: 50%;
+	left: -14px;
+	margin-top: -7px;
+	pointer-events: none;
+}
+
+.cy-toolbar-item {
+	margin-top:0px !important;
+}

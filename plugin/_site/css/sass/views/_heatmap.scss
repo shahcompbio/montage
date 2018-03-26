@@ -1,0 +1,197 @@
+// Heatmap
+
+.heatmap-wrapper {
+	margin: 0 0 0 24px;
+}
+
+.heatmap-container {
+	width: auto; 
+	height: auto;
+	float: left;
+	text-align:center;
+	padding: 5px 10px;
+	overflow: hidden;
+}
+
+.heatmap-container h6 {
+	margin-top: 0px;
+	font-weight: 600;
+	color: #797979;
+	text-align:center;
+}
+
+.heatmap-legend {
+	clear:both;
+	height: auto;
+	padding: 0px 10px;
+}
+
+.heatmap2-legend, .heatmap-legend .tick text{
+  font-size: 9pt;
+  font-family: Consolas, courier;
+  fill: #585858; 
+}
+
+.heatmap-legend .axis path, .heatmap-legend .axis line{
+  fill: #none;
+  stroke: #aaa; 
+  shape-rendering: crispEdges;
+}
+
+.heatmap-wrapper rect.selection {
+	stroke          : #333;
+	stroke-dasharray: 4px;
+	stroke-opacity  : 0.5;
+	fill            : transparent;
+}
+
+.heatmap2-wrapper rect.cell-border, .heatmap-wrapper rect.cell-border {
+	stroke: #eee;
+	stroke-width:0.3px;   
+}
+
+.heatmap2-wrapper rect.cell-selected, .heatmap-wrapper rect.cell-selected {
+	stroke: #0C7CA6;
+	stroke-width: 0.5px;   
+}
+
+.heatmap2-wrapper rect.cell-hover, .heatmap-wrapper rect.cell-hover {
+	stroke: #006294;
+	stroke-width: 1.5px;   
+}
+
+.heatmap2-wrapper text.mono, .mono, .heatmap-wrapper text.mono, .mono {
+	font-size: 9pt;
+	font-family: Consolas, courier;
+	fill: #aaa;
+}
+
+.heatmap2-wrapper .mono2, .heatmap-wrapper .mono2{
+	font-size: 9pt;
+	font-family: Consolas, courier;
+	fill: black;
+}
+
+.heatmap-wrapper text.text-selected {
+	fill: #000;
+}
+
+.heatmap-wrapper text.text-highlight {
+	fill: #c00;
+}
+
+.heatmap-wrapper text.text-hover {
+	fill: #00C;
+}
+
+.heatmap2-wrapper #tooltip,  .heatmap-wrapper #tooltip {
+	position: absolute;
+	width: 200px;
+	height: auto;
+	padding: 10px;
+	background-color: white;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	pointer-events: none;
+	z-index:9999;
+}
+
+.heatmap2-wrapper #tooltip.hidden, .heatmap-wrapper #tooltip.hidden {
+	display: none;
+}
+
+.heatmap2-wrapper #tooltip p, .heatmap-wrapper #tooltip p {
+	margin: 0;
+	font-family: sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.heatmap2-wrapper {
+	height: auto;
+	float: left;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	overflow:hidden;
+}
+
+.heatmap2-legend{
+	float: right;
+	height: auto;
+}
+
+.heatmap2 .subset-title{
+	font-weight: 500;
+}
+
+.heatmap2-wrapper .active-subset{
+	outline: 1.0px solid #6DB0CA;
+}
+
+.heatmap2-wrapper .group-hover{
+	outline: 2.5px solid #6DB0CA;
+}
+
+.heatmap2-legend path{
+	fill: #none;
+	stroke: #aaa;
+}
+
+
+.chipheatmap-wrapper {
+	float: left;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	overflow:hidden;
+}
+
+.chipheatmap-wrapper rect.cell {
+	stroke-width: 0.3px;
+	stroke: #eee;
+	fill-opacity: 1;
+}
+
+.chipheatmap-wrapper .cell-hover{
+	outline: 2px solid #6db0ca;
+}
+
+
+.chipheatmap-wrapper .cell-brushed {
+	outline: 1px solid #686868;
+}
+
+.chipheatmap-wrapper .cell-active, .chipheatmap-wrapper .subset-hover {
+	outline: 1px solid #0C7CA6;
+}
+
+.chipheatmap-wrapper rect.cell-inactive, .chipheatmap-wrapper rect.subset-unhover {
+	fill-opacity: 0.5;
+}
+
+.chipheatmap-legend{
+	float: right;
+}
+.chipheatmap-legend text {
+	font-size: 8pt;
+  	fill: #585858; 
+}
+.chipheatmap-legend path{
+	fill: #none;
+	stroke: #aaa;
+}
+
+.chipheatmap-legend text.subset-active{
+	font-weight: bold;
+}
+
+.chipheatmap-legend text.subset-hover{
+	fill: #eee;
+}

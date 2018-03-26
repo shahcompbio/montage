@@ -1,0 +1,60 @@
+.scatterplot-wrapper {
+	float:left;
+}
+
+.scatterplot-legend {
+	float:right;
+}
+
+.scatterplot-wrapper circle.cell {
+	stroke: #000000;
+	stroke-width: 0.5px;
+	fill: #0C7CA6;
+	fill-opacity: 1;
+}
+
+.scatterplot-wrapper circle.cell-hover {
+	fill: #f3e910 !important;
+}
+
+.scatterplot-wrapper circle.cell-brushed {
+	fill-opacity: 0.5;
+}
+
+.scatterplot-wrapper circle.cell-inactive {
+	fill: #D1D2D4 !important; 
+}
+
+.scatterplot-wrapper circle.subset-unhover {
+	fill: #D1D2D4 !important; 
+}
+
+
+.scatterplot-wrapper text {
+	font-size: 8pt;
+}
+
+.scatterplot-legend text {
+	font-size: 8pt;
+  	fill: #585858; 
+}
+
+.scatterplot-wrapper .brush .extent{
+ 	stroke: #000;
+ 	fill-opacity: 0.125;
+ 	shape-rendering: crispEdges; 
+}
+
+.scatterplot-wrapper .brushOverlay{
+  stroke: #000;
+  fill-opacity: 0;
+  shape-rendering: crispEdges; 
+  pointer-events:none;
+}
+
+.scatterplot-histogram-hidden{
+  display: none; }
+
+.baseHistogramSVG-xAxis .bar, .baseHistogramSVG-yAxis .bar{
+  stroke:#8c8989;
+  border-width: 1px; } 

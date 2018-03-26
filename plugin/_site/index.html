@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Montage - Realtime Cancer Genomic Analysis</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/tp/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate CSS -->
+    <link href="css/tp/animate.min.css" rel="stylesheet">
+
+	<!-- Gridster CSS -->
+    <link href="css/tp/jquery.gridster.min.css" rel="stylesheet">
+    
+	<!-- Tags CSS -->
+    <link href="css/tp/bootstrap-tagsinput.min.css" rel="stylesheet">
+
+	<!-- Bootstrap Multiselect CSS -->
+    <link href="css/tp/bootstrap-multiselect.min.css" rel="stylesheet">
+
+    <!-- Bootstrap toggle CSS -->
+    <link href="css/tp/bootstrap-toggle.min.css" rel="stylesheet">
+
+    <!-- Bootstrap slider CSS -->
+    <link href="css/tp/bootstrap-slider.min.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<!-- <input type="checkbox" checked data-toggle="toggle"> -->
+	<div id="loading" class="alert-dismissable" style="display:none;">
+		<i class="fa fa-circle-o-notch fa-refresh-animate"></i>&nbsp;&nbsp;Loading...</span>
+	</div>
+	<div id="progress" class="alert-dismissable" style="display: none;">
+		<div class="progress">
+			<div style="width: 0%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" class="progress-bar">
+				<span class="sr-only">0% Complete</span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="cy-toolbar" class="cy-toolbar">
+		<ul class="nav nav-pills nav-stacked">
+			<li><div id="cy-toolbar-title" class="header"><strong></strong></div></li>
+			<li id="cy-add-data" class="cy-toolbar-item"><a href="#"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Dataset</a></li>
+			<li id="cy-add-view" class="cy-toolbar-item"><a href="#"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add View</a></li>
+			<li id="cy-delete-view" class="cy-toolbar-item"><a href="#"><i class="fa fa-times"></i>&nbsp;&nbsp;Delete View</a></li>
+			<li id="cy-delete-data" class="cy-toolbar-item"><a href="#"><i class="fa fa-times"></i>&nbsp;&nbsp;Delete Dataset</a></li>
+		</ul>
+		<div class="arrow"></div>
+	</div>
+	
+	<div id="viz-popup-s" class="popup-s">
+		<div id="viz-popup-s-title"></div>
+	</div>
+	
+	<div id="viz-popup" class="popup">
+		<div class="popup-top">
+			<span id="viz-popup-title" class="popup-title"></span>
+		</div>
+		<div id="viz-popup-content" class="popup-body">
+		</div>
+	</div>
+
+	<div id="sidebar" class="navbar-default sidebar" role="navigation">
+		<div id="cy" style="width:100%;height:230px;background:#F8F7F3;"></div>
+		
+		<div class="sidebar-content">
+			<div id="tab-overlay" class="tab-overlay">
+				<div id="tab-overlay-title">New <strong>Basic Structure</strong></div>
+				<ul class="nav nav-pills">
+                	<li class="active"><a href="#">&nbsp;</a></li>
+              	</ul>
+			</div>
+			<ul class="nav nav-tabs">
+				<li id="browse-element-tab" class="sidebar-tab active"><a href="#browse-element" data-toggle="tab" ><i class="fa fa-list"></i>&nbsp;&nbsp;Browse&nbsp;&nbsp;</a></li>
+				<li id="create-element-tab" class="sidebar-tab"><a href="#create-element" data-toggle="tab"><i class="fa fa-plus"></i>&nbsp;&nbsp;Create</a></li>
+				<li id="edit-element-tab" class="sidebar-tab"><a href="#edit-element" data-toggle="tab"><i class="fa fa-edit"></i>&nbsp;&nbsp;Modify</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade" id="create-element">
+					<div id="sidebar-create" class="sidebar-create">
+					</div>
+				</div>
+		
+				<div class="tab-pane fade" id="edit-element">
+					<div class="alert alert-info notification">
+					  <strong>No node selected!</strong><br />Select a visualization or a node to edit.
+					</div>
+				</div>
+
+				<div class="tab-pane fade active in" id="browse-element">
+					<div id="sidebar-browse-filter">
+					</div>
+					<div id="sidebar-browse" class="sidebar-create stored-view-list">
+					</div>
+				</div> 
+			</div> <!-- /.tab-content -->
+		</div> <!-- /.sidebar-content -->
+	</div>
+		
+		
+    <div id="wrapper">
+		
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        	<div class="color-bar">
+        		<div class="color-band color-band-blue"></div>
+        		<div class="color-band color-band-green"></div>
+        		<div class="color-band color-band-yellow"></div>
+        		<div class="color-band color-band-red"></div>
+        	</div>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="hide-editor" href="javascript:void(0);" class="navbar-brand"><i class="fa fa-bars"></i> MONTAGE</a>
+            </div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<!-- User Information -->
+				<ul id="share-view" class="nav navbar-nav navbar-right">
+					<li>
+						<div id="configuration-options-section" class="dropdown">
+							<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown"><span class="settings glyphicon glyphicon-cog"></span>
+								<span class="caret"></span></button>
+							<ul id="configuration-options" class="dropdown-menu">
+								<li><a href="#" id="configure-data-types" data-node="data" data-type="common">Configure Data Types</a></li>
+								<li class="dropdown-submenu">
+									<a id="configure-data-filters" href="#">Configure Data Filters<span class="caret"></span></a>
+								        <ul class="dropdown-menu"></ul>
+								</li>
+								<li><a href="#" id="configure-template" data-type="template" tabindex="-1">Configure Templates</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Share
+								<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#" id="save-view">Share Link</a></li>
+								<li><a href="#" id="create-template">Create Template</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="dropdown">
+							<button id="remove-all-plots" class="btn btn-default btn-sm" type="button" data-placement="bottom" data-toggle="tooltip" data-original-title="Remove all plots"><span class="fa fa-trash-o"></span>
+						</div>
+					</li>
+					<li><a id="version" style="margin-right:12px;color:#AAA;min-width:100px;" href="#"></a></li>
+				</ul>
+			</div>
+        </nav>
+        
+        <div id="page-wrapper">
+            <div class="container-fluid">
+				<div class="row" style="margin-top:16px;">
+					<div id="view-area" class="gridster">
+						<ul id="visualization-area" style="list-style:none; list-style-type: none;">
+						</ul>
+					</div>
+				</div>
+            </div> 
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    
+	<!-- === Core Libraries === -->
+	
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/lib/jquery-1.11.0.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/lib/bootstrap.min.js"></script>
+
+
+	<!-- === Plugins === -->
+	
+	<!--Import D3 library-->
+	<script src="js/plugins/d3.v3.min.js"></script>
+	<script src="js/plugins/d3.tip.min.js"></script>
+	
+	<!-- Gridster -->
+    <script src="js/plugins/jquery.gridster.min.js"></script>
+    
+	<!-- Cytoscape (graphing) -->
+	<script src="js/plugins/cytoscape.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="js/plugins/bootstrap-multiselect.custom.min.js"></script>
+
+	<!-- TypeAhead and Tags -->
+	<script src="js/plugins/bootstrap-tagsinput.min.js"></script>
+	<script src="js/plugins/bootstrap3-typeahead.min.js"></script>
+	
+	<!-- Bootstrap Dropdowns and dropdown hovering	 -->
+	<script src="js/plugins/bootstrap-hover-dropdown.min.js"></script>
+
+	<!-- Bootstrap Toggle plugin -->
+	<script src="js/plugins/bootstrap-toggle.min.js"></script>
+
+	<!-- Bootstrap Slider plugin -->
+	<script src="js/plugins/bootstrap-slider.min.js"></script>
+
+	<!-- Bootstrap Treeview plugin -->
+	<script src="js/plugins/bootstrap-treeview.min.js"></script>
+
+	<!-- Underscore.js plugin-->
+	<script src="js/plugins/underscore.min.js"></script>
+
+	<!-- Colorbrewer plugin-->
+	<script src="js/plugins/colorbrewer.min.js"></script>
+
+	<!-- SVG crowbar plugin-->
+	<script src="js/plugins/my_svg_crowbar.min.js"></script>
+
+	<!-- Science Stats plugin-->
+	<script src="js/plugins/science.v1.min.js "></script>
+
+	<!-- jsPDF plugin-->
+	<script src="js/plugins/jsPDF.min.js"></script>
+
+	<!-- RGB Color plugin -->
+	<script src="js/plugins/rgbcolor.min.js"></script>
+
+	<!-- Stack Blur plugin-->
+	<script src="js/plugins/stackBlur.min.js"></script>
+
+	<!-- Canvg plugin-->
+	<script src="js/plugins/canvg.min.js"></script>
+	
+
+	<!-- ESV library -->
+	<script src="js/config.js"></script>
+	<script src="js/esv.js"></script>
+	<script src="js/esv.editor.js"></script>
+	<script src="js/esv.queries.js"></script>
+	<script src="js/esv.cc.js"></script>
+	<script src="js/esv.viewfacades.js"></script>
+	<script src="js/views/esv.viewlibs.js"></script>
+	<script src="js/views/esv.chipheatmap.js"></script>
+	<script src="js/views/esv.scatterplot.js"></script>
+	<script src="js/views/esv.violin.js"></script>
+	<script src="js/views/esv.cellscape2.js"></script>
+	
+	<!-- Custom JavaScript -->
+	
+	<script type="text/javascript">
+		$(function(){
+			ESV.init();
+		});
+	</script>
+
+</body>
+
+</html>

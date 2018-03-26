@@ -1,0 +1,276 @@
+// General view styles
+
+/* Focused */
+.panel-focus {
+  -webkit-box-shadow: 0 1px 8px rgba(30, 193, 252, 0.8) !important;
+  box-shadow: 0 1px 18px rgba(30, 193, 252, 0.8) !important;
+}
+
+/* Arrow Box Popup */
+.arrow-box{
+	position: absolute;
+	bottom: 84px;
+	float: right;
+	top: 38px;
+	width: 200px;
+	height: 50px;
+	border-radius:4px;
+	z-index: 9998;
+	opacity: 1.0;
+	background: #ffffff;
+	border: 4px solid #F3E2A9;
+	padding:4px 8px;
+}
+.arrow-box{
+	left: 57%;
+}
+
+.arrow-box-7 {
+	left: 75%;
+}
+
+.arrow-box-7plus {
+	left: 78%;
+}
+
+.arrow-box-4 p, .arrow-box-7 p, .arrow-box-7plus p{
+	margin-top: 10px;
+	font-size: 12px;
+	line-height: 1.4em;
+	text-align: center;
+}
+
+.arrow-box-4:after, .arrow-box-4:before, .arrow-box-7:after, .arrow-box-7:before, .arrow-box-7plus:after, .arrow-box-7plus:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow-box-4:after, .arrow-box-7:after, .arrow-box-7plus:after  {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.arrow-box-4:before, .arrow-box-7:before, .arrow-box-7plus:before  {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: #F3E2A9;
+	border-width: 16px;
+	margin-left: -16px;
+}
+
+.arrow-box-length {
+	position: absolute;
+	bottom: 84px;
+	float: right;
+	top: 38px;
+	width: 290px;
+	height: 67px;
+	border-radius: 4px;
+	z-index: 9998;
+	opacity: 1.0;
+	background: #ffffff;
+	border: 3px solid #C24C88;
+	padding: 4px 8px;
+}
+
+.arrow-box-length p {
+	margin-top: 10px;
+	font-size: 12px;
+	line-height: 1.4em;
+	text-align: right;
+}
+
+.arrow-box-length:after, .arrow-box-length:before{
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.arrow-box-length:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #ffffff;
+  border-width: 8px;
+  margin-left: -8px; }
+
+.arrow-box-length:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-bottom-color: #C24C88;
+  border-width: 12px;
+  margin-left: -12px; }
+
+
+/* Corrupted Viz */
+.error-overlay {
+	position:absolute; 
+	top: 0; 
+	left:0; 
+	bottom: 0px;
+	width:100%; 
+	height: auto;
+	background-color:#FCFCFC;
+	display:none;
+	text-align:center;
+	font-size: 12px;
+	color:#BDBDBD;
+	z-index:9998;
+}
+
+.error-overlay i {
+	font-size: 180px;
+	color: #EEE;
+	margin-top:36px;
+}
+
+.panel {
+	height: 100%;
+}
+
+.close-viz {
+	color:#999 !important;
+}
+
+.close-viz:hover {
+	color:#AAA !important;
+}
+
+.close-viz-w {
+	color:#FFF !important;
+}
+
+.close-viz-w:hover {
+	color:#CCC !important;
+}
+
+.label {
+	font-size: 100% !important;
+}
+
+/* General Viz Styles */
+.axis path, .axis line {
+	fill: none;
+  	stroke: #777;
+  	shape-rendering: crispEdges;
+}
+
+/* Brush (Selectable overlay) */
+
+.brush .extent {
+	stroke: none;
+	fill-opacity: .125;
+	shape-rendering: crispEdges;
+}
+
+
+/* Viz Popup */
+
+.popup {
+	display:none;
+	position: fixed;
+	top:-1000px;
+	left:-1000px;
+	background:#1C67A3;
+	z-index:9999;
+	border-radius: 6px;
+}
+
+.popup-top {
+	border-radius: 6px 6px 0 0;
+	background: #2196f3;
+	height:40px;
+	width:100%;
+	color: #FFF;
+	font-size: 13px;
+	padding-left:15px;
+	padding-right: 20px;
+}
+
+.popup-top span {
+	line-height:40px;
+	font-weight:bold;
+}
+
+.popup-body {
+	position:absolute;
+	top:40px;
+	border-radius: 0 0 2px 2px;
+	width:100%;
+	color: #FFF;
+	padding:8px;
+	font-size:12px;
+}
+
+.popup-s {
+	display: none;
+	position: fixed;
+	top:-1000px;
+	left:-1000px;
+	width: auto;
+	height: 40px;
+	background:#1C67A3;
+	color:#FFF;
+	z-index:9999;
+	border-radius: 6px;
+}
+
+.popup-s div {
+	font-size: 13px;
+	padding-left:8px;
+	height:40px;
+	line-height:40px;
+	font-weight:bold;
+	margin-left: 5px;
+	margin-right: 15px;
+}
+
+
+/* d3 tip */
+
+.d3-tip {
+	padding: 12px;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	border-radius: 2px;
+	z-index: 1000;
+	line-height: 1;
+	font-size: 9pt;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+	box-sizing: border-box;
+	display: inline;
+	font-size: 10px;
+	width: 100%;
+	line-height: 1;
+	color: rgba(0, 0, 0, 0.8);
+	position: absolute;
+  	pointer-events: none;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+	content: "\25BC";
+	margin: -1px 0 0 0;
+	top: 100%;
+	left: 0;
+	text-align: center;
+}
+
+
+/* Eastward tooltips */
+.d3-tip.e:after {
+  content: "\25C0";
+  margin: -4px 0 0 0;
+  top: 50%;
+  left: -8px;
+}

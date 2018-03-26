@@ -1,0 +1,240 @@
+/* Popups */
+
+#whiteout {
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background: #FFF;
+	opacity: 0.75;
+	z-index: 9999;
+}
+
+body > #whiteout {
+	position: fixed;
+}
+
+.warning-popup {
+	position: fixed;
+	top:30%;
+	left:50%;
+	width:360px;
+	height: 280px;
+	margin-left:-180px;
+	z-index: 9999;
+	text-align:center;
+}
+
+.warning-popup a, .warning-popup-wide a{
+	width:100%;
+	margin-bottom:4px;
+}
+
+.warning-popup-wide {
+	position: fixed;
+	top:30%;
+	left:50%;
+	width:400px;
+	height: 280px;
+	margin-left:-180px;
+	z-index: 9999;
+	text-align:center;
+}
+
+/* Create Panel Popup */
+#create-panel-popup .modal-dialog{
+	width: 400px;
+}
+
+#create-panel-popup .modal-body{
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+}
+
+#create-panel-popup .create-view, #create-panel-popup .open-view {
+	height: 65px;
+	padding-left: 5px;
+	margin-left: 10px;
+}
+
+#create-panel-popup .create-element-left{
+	padding-top: 2px;
+}
+
+#panel-settings-popup .modal-dialog{
+	width: 452px;
+}
+
+.modal-content .modal-header{
+	border-bottom: 1px solid #dddddd;
+}
+
+#panel-settings-popup .modal-body {
+	 padding: 0;
+}
+
+#panel-settings-popup ul {
+	width: 100%;
+	list-style: inside none none;
+	padding: 0;
+}
+
+#panel-settings-popup ul li {
+	width: 100%;
+	border-bottom: 1px solid #dddddd;
+}
+
+#panel-settings-popup .field-settings {
+	display: flex;
+}
+
+#panel-settings-popup .gs-w > div {
+	display: -webkit-flex;
+}
+
+#panel-settings-popup .field-settings .item {
+	float: left;
+	padding: 2px 5px;
+}
+
+#panel-settings-popup .field-settings .item.info {
+	width: 100%;
+	margin-left: 10px;
+}
+
+#panel-settings-popup .field-settings .item.info .bootstrap-tagsinput {
+	float: left;
+}
+
+#panel-settings-popup .field-settings .item.info > a {
+	float: right;
+	font-size: 1.5em;
+	color: #666666;
+	display: none;
+	padding-left: 10px;
+}
+
+#panel-settings-popup li.gs-w:not(.disabled):hover .item.info > a,
+#panel-settings-popup li.gs-w.active:not(.disabled) .item.info > a {
+	display: block;
+}
+
+#panel-settings-popup .modal-body.disabled {
+	pointer-events: none;
+}
+
+#panel-settings-popup li.gs-w.disabled .info {
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+#panel-settings-popup li.gs-w.deactivated {
+	color: red;
+}
+
+#panel-settings-popup li.gs-w > .field-settings > input[type="checkbox"],
+#panel-settings-popup li.gs-w > .field-settings > .info > input[type="checkbox"] {
+	margin: 10px 8px 0px 0px;
+}
+
+#panel-settings-popup .field-settings .item.info select,
+#panel-settings-popup .field-settings .item.info .create-number,
+#panel-settings-popup #panel-config .field-settings .item.info .create-text {
+	width: 70%;
+	float: left;
+}
+
+#panel-settings-popup .data-all-type .create-text {
+	width: 85%;
+	margin-right: 25%;
+	float: left;
+}
+
+#panel-settings-popup .data-all-type li.gs-w:not(.disabled):hover .create-text,
+#panel-settings-popup .data-all-type li.gs-w.active:not(.disabled) .create-text {
+	margin-right: 0;
+}
+
+#panel-settings-popup li.gs-w > .field-settings > .btn.toggle {
+	margin: 38px 12px 0px 5px;
+}
+
+#panel-settings-popup #panel-config li.gs-w > .field-settings > .btn.toggle {
+	margin-top: 30px;
+}
+
+#panel-settings-popup .gs-w {
+	background: #ffffff;
+	padding: 0px 25px;
+}
+
+#panel-settings-popup .gs-w:hover {
+	background: #f5f5f5;
+}
+
+#panel-settings-popup .gs-w.active {
+	background: #dcdcdc;
+}
+
+#panel-settings-popup .gs-w .duplicate-field {
+	float: right;
+}
+
+#panel-settings-popup .gs-w .remove-field {
+	float: right;
+	color: #cb3434;
+}
+
+.glyphicon.glyphicon-duplicate:before {
+	content: "\e224";
+}
+
+#panel-settings-popup .preview-holder {
+	background: #efefef !important;
+}
+
+#panel-settings-popup #widget-config > .form-group {
+	padding: 10px 40px 5px 25px;
+}
+
+#panel-settings-popup #widget-config .gridster ul {
+	margin-top: -30px;
+}
+
+#panel-settings-popup .modal-header, #panel-settings-popup .modal-footer {
+	padding: 15px 25px;
+}
+
+#panel-settings-popup .modal-footer .btn.select-options {
+	margin-left: 50px;
+	min-width: 130px;
+}
+
+#panel-settings-popup .modal-footer .btn.select-fields {
+	min-width: 100px;
+}
+
+.sidebar-group-right .has-error select, #panel-settings-popup .has-error select {
+	box-shadow: none;
+}
+
+#share-view-popup .modal-dialog {
+	max-width: 400px;
+}
+
+#share-view-popup .modal-content .modal-body {
+	padding: 15px 30px;
+}
+
+#share-view-popup input[type=checkbox] {
+	height: 24px;
+	width: 24px;
+	float: left;
+	margin: 0 6px 10px 0;
+}
+
+.page-previous,
+.page-next {
+ 	cursor: pointer; 
+ }

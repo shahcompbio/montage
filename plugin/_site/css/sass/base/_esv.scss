@@ -1,0 +1,311 @@
+/* Global Styles */
+
+body {
+    margin-top: 100px;
+    background-color: #fdfdfd;
+}
+
+@media(min-width:768px) {
+    body {
+        margin-top: 50px;
+    }
+}
+
+.hide {
+	display:none;
+}
+
+.no-pad {
+	padding: 0px !important;
+}
+
+.pad-right-8 {
+	padding-right: 8px;
+}
+
+.rotate90 {
+	transform: rotate(-90deg);
+}
+
+#wrapper {
+	min-width:1325px;
+  	transition: all 0.8s ease-in-out;
+  	padding-left: 386px;
+}
+
+#page-wrapper {
+    width: 100%;
+    background-color: #fdfdfd;
+	padding: 10px;
+}
+
+.huge {
+    font-size: 50px;
+    line-height: normal;
+}
+
+/* Top Navigation */
+
+.color-bar {
+	width:100%;
+	height:4px;
+}
+
+.color-band {
+	width:25%;
+	height:4px;
+	float:left;
+}
+
+.color-band-blue {
+	background:#2196f3;
+}
+
+.color-band-green {
+	background:#5cb85c;
+}
+
+.color-band-yellow {
+	background:#f0ad4e;
+}
+
+.color-band-red {
+	background:#d9534f;
+}
+
+#navbar .dropdown {
+	margin-top: 18px;
+	margin-left: 2px;
+}
+
+#navbar .dropdown-menu {
+	min-width: 100px;
+	text-align: right;
+}
+
+#navbar .dropdown ul {
+	width: auto;
+	padding: 0;
+	overflow: visible;
+}
+
+#navbar .btn {
+	border: 1px solid #eeeeee;
+	text-transform: none;
+	box-shadow: none;
+}
+
+.dropdown-submenu {
+	position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+	top: 0;
+	right: 100%;
+}
+
+/* Gridster */
+
+#visualization-area {
+	padding: 0px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#visualization-area > li[id^='container-'] {
+	overflow: hidden;
+	overflow: -moz-hidden-unscrollable;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gridster .gs-w {
+	background: #DDD;
+	cursor: pointer;
+}
+
+.gridster .preview-holder {
+	background: #e1f5fe !important;
+}
+
+
+/* Filters Popup */
+
+#alert-filter-container {
+	position:fixed;
+	bottom:84px;
+	right:8px;
+	z-index:9998;
+}
+
+.alert-filter {
+	position:fixed;
+	bottom:-12px;
+	right:8px;
+	z-index:9998;
+	opacity:0.9;
+	background:#006064;
+}
+
+.alert-filter:hover {
+	opacity:1;
+  	transition: opacity 0.2s ease-in-out;
+}
+
+.multifilter-pill{
+	position: absolute; 
+	top: 1.5px;
+	right: 45px;
+	height: 92%;
+	padding: 5px 16px;
+	font-size: 12px;
+	color: #FFFFFF;
+	border-radius: 4px;
+	background: #00acc1;
+	cursor: pointer;
+	list-style-type: none;	
+}
+
+.mf-small{
+	width: 116px;
+}
+
+.mf-big{
+	width: 123px;
+}
+
+.multifilter-pill:hover{
+	text-decoration: line-through;
+}
+
+.multifilter-pill:hover .ddbackground{
+	display: block;
+}
+
+.filter-pill{
+	position: relative;
+	float:right;
+	top: -8px;
+	left: -16px;
+	background:#00acc1;
+	color:#FFF;
+	border-radius:4px;
+	height: 32px;
+	padding: 4px 18px;
+	overflow: hidden;
+	text-align: right;
+	word-wrap: break-word;
+	max-width: 100%;
+}
+
+.filter-pill:hover {
+	text-decoration:line-through;
+	height: auto;
+}
+
+.panel-heading > li > .filter-pill {
+	max-width: 58%;
+}
+
+.panel-heading:hover{
+	display:block;
+}
+
+/* Next two style options needed to have dropdown infront of table */
+
+.panel-heading {
+  position: relative;
+  height: 35px;
+  z-index: 100; }
+
+.panel-body{
+	position: absolute;
+	width: 100%;
+	height: 95%;
+	z-index: 5;
+}  
+
+.panel-heading .dropdownMenu button{
+  outline: none;
+  padding-top:5px;
+  background: none;
+  border:none; 
+  color:#FFFFFF !important;
+  font-size: 13pt; }
+
+.panel-heading .dropdownMenu button:hover {
+  color: #AAA !important; }
+  
+.panel-heading .dropdownMenu-w button{
+  color: #999 !important; }
+
+.panel-heading .dropdownMenu{
+  position: absolute; 
+  z-index:105; }
+
+.panel-heading .dropdownMenuContent{  
+  padding:initial;
+  width:initial;
+  padding-left: 0px;
+  border-radius: 4px;
+  text-align: right;
+  position: absolute;
+  background-color: #ffffff !important;
+  min-width: 110px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 500; }
+
+.panel-heading .dropdownMenuContent a {
+ line-height: 1.846;
+ color: #666666 !important;
+ padding: 3px 16px;
+ line-height: 1.846;
+ font-size: 9pt;
+ font-family: sans-serif;
+ text-decoration: none; }
+
+.panel-heading .dropdownMenuContent a:hover {
+  background-color: #E3E3E3 !important; 
+  color: #000000 !important; }
+
+.panel-heading .dropdownMenuContent .inactiveLink{
+  pointer-events: none !important; 
+  background-color: #ebe9e7;
+  color:#b1b0b0 !important; }
+
+.panel-heading .hideMenu {
+  display:none; }
+
+.panel-heading .showMenu {
+  display:block; }
+  
+.dropdown-menu{
+	float: right;
+	border-radius: 4px;
+	width: 265px;
+	padding: 8px;
+	max-height: 150px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.ddbackground{
+	top: 1.5px;
+	left: 18px;
+	position: relative;
+	background:#00acc1;
+	color: #ffffff;
+}
+
+.dropdown-menu .filter-pill{
+	position: relative;
+	float: right;
+	left: 10px;
+	top:0px;
+}
+
+.disabled-view {
+	pointer-events: none;
+	background: #fff;
+	opacity: 0.3;
+}

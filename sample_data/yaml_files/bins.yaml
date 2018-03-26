@@ -1,0 +1,16 @@
+__PIPELINE_INFO__:
+  data_type: generic
+__HEADER__:
+  caller: single_cell_hmmcopy_bin
+  sample_id: SA501X3F
+  file_format: csv
+  field_mapping:
+                chrom_number: chr
+  field_types:
+                cell_id: str
+                chr: str
+                start: int
+                end: int
+                integer_copy_scale: float
+                state: float
+

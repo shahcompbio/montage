@@ -1,0 +1,15 @@
+__PIPELINE_INFO__:
+  data_type: generic
+__HEADER__:
+  caller: single_cell_qc
+  sample_id: SA501X3F
+  file_format: csv
+  field_types:
+                cell_id: str
+                cell_call: str
+                all_heatmap_order: int
+                experimental_condition: str
+                mad_neutral_state: float
+                MSRSI_non_integerness: float
+                sample_plate: str
+                total_mapped_reads: int
