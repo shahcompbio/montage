@@ -1,3 +1,7 @@
+# !!! DEPRECATED
+
+Please note that we have stopped development and support in favour of [Alhena](https://github.com/shahcompbio/alhena), a similar single cell DNA visualization platform.
+
 # Montage
 
 ![Montage overview](https://github.com/shahcompbio/montage/blob/master/images/montage_overview.png)
