@@ -13,7 +13,7 @@
 
     <properties>
 	<elasticsearch.version>2.4.6</elasticsearch.version>
-	<lucene.maven.version>5.5.4</lucene.maven.version>
+	<lucene.maven.version>8.8.2</lucene.maven.version>
 	<randomizedtesting-runner.version>2.3.2</randomizedtesting-runner.version>
         
     </properties>
